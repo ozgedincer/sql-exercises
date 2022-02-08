@@ -18,3 +18,11 @@ CREATE TABLE account(
 	created_on TIMESTAMP NOT NULL,
 	last_login TIMESTAMP NOT NULL,
 )
+
+
+#3
+CREATE TABLE account_job(
+	user_id INTEGER REFERENCES account(user_id),
+	job_id INTEGER REFERENCES job(job_id),
+	hire_date TIMESTAMP
+)
